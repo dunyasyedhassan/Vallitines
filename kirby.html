@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirby Page</title>
+    <link rel="stylesheet" href="kirby_styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="buttons-container">
+            <!-- Yes Button redirects to kamala.html -->
+            <button onclick="redirectToKamalaPage()">
+                <img src="images/yes.png" alt="Yes Button">
+            </button>
+            <!-- No Button triggers a popup -->
+            <button onclick="showKirbyNoPopup()">
+                <img src="images/no.png" alt="No Button">
+            </button>
+        </div>
+    </div>
+    <!-- Popup Content -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <img src="images/kirby_no.png" alt="Kirby No">
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script>
+        // Redirect to kamala.html
+        function redirectToKamalaPage() {
+            window.location.href = "kamala.html";
+        }
+
+        // Show the "No" popup
+        function showKirbyNoPopup() {
+            const popup = document.getElementById("popup");
+            popup.style.display = "flex";
+        }
+
+        // Close the popup
+        function closePopup() {
+            const popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+</html>

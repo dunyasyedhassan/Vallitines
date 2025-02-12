@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamala Page</title>
+    <link rel="stylesheet" href="kamala_styles.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Image Element -->
+        <img id="door-image" class="image" src="images/door.png" alt="Door Image">
+    </div>
+    <script>
+        // Redirect when the image is clicked
+        const image = document.getElementById("door-image");
+        image.addEventListener("click", () => {
+            window.location.href = "okk.html"; // Redirect on image click
+        });
+    </script>
+</body>
+</html>
